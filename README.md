@@ -8,6 +8,15 @@ outside the ball. The method on this package are described in the article
 'A minimum enclosing ball method to detect differential expression genes for 
 RNA-seq data' [1]. 
 
+We add a new function `scMEB` for detecting differential expressed genes in
+scRNA-seq data withour prior clustering results. We benchmarked scMEB against 
+two other methods that have implications for DEGs identification without clustering 
+the cells. The analysis results of 11 real datasets demonstrated that scMEB 
+had a better or at least comparable performance with the competing methods 
+in terms of identifying marker genes, cell clustering, and predicting genes 
+with biological functions. Moreover, scMEB ran much faster than the other methods, 
+which is especially useful for detecting DEGs in high-throughput scRNA-seq data.
+
 # Introduction
 Next-generation sequencing provides the ability to study the underlying
 complexities of gene expression [2]. It has been applied to a wide range 
