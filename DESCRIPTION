@@ -2,7 +2,7 @@ Package: MEB
 Type: Package
 Title: A Minimum Enclosing Ball (MEB) method to detect differential expression 
     genes for RNA-seq data
-Version: 0.99.3
+Version: 0.99.4
 Author: Yan Zhou, Jiadi Zhu
 Maintainer: Jiadi Zhu <2160090406@email.szu.edu.cn>,
             Yan Zhou <zhouy1016@szu.edu.cn>
@@ -27,13 +27,16 @@ Description: Identifying differential expression genes between the
     the MEB method to normalize data in advance. Besides, the MEB
     method could be easily applied to the same or different species data
     and without changing too much.
+    We add a new function scMEB() for dectecting differential expressed genes
+    in scRNA-seq without prior clustering results.
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
 Depends: R (>= 3.6.0)
 Suggests: knitr,rmarkdown
 VignetteBuilder: knitr
-RoxygenNote: 6.1.1
-Imports: e1071, SummarizedExperiment
+RoxygenNote: 7.2.1
+Imports: e1071, SummarizedExperiment, SingleCellExperiment, edgeR, 
+     wrswoR, scater
 biocViews: DifferentialExpression, GeneExpression, Normalization, 
            Classification
