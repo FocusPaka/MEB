@@ -3,14 +3,21 @@
 \alias{MEB NEWS}
 \encoding{UTF-8}
 
-\section{Version 0.99.4}{\itemize{
+\section{Version 1.2.0}{\itemize{
 \item
-  Add a new function scMEB for the scRNA-seq data.
+  The latest one.
 }}
+
+
+\section{Version 1.1.0}{\itemize{
+\item
+  failed update.
+}}
+
 
 \section{Version 0.99.3}{\itemize{
 \item
-  Update package.
+  Accepted version.
 }}
 
 \section{Version 0.99.2}{\itemize{
