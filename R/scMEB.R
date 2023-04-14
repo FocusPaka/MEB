@@ -8,20 +8,21 @@
 #' @param stable_idx A vector shows the name of stable expressed gene in sce.
 #' @param filtered A logical value to show if the data have been filtered.
 #' @param gamma A parameter needed for all kernels except linear.
-#' @param nu parameter needed for one-classification.
+#' @param nu A parameter needed for one-classification.
 #' @param reject_rate A value used in controling the scale of ball, default is
 #' 0.01.
 #' @return list(.) A list of results, "model" represents the model of scMEB,
-#' which could be used to discriminate a new gene, "gamma" represents the
-#' selected gamma parameters in model scMEB, "train_error" represents the
-#' corresponding train_error when the value of gamma changed, "dist" shows the
-#' distance between the points and the radius of the sphere in feature space.
+#' which could be used to discriminate a new gene, "dat_pca" represents the 
+#' first 50 PCs of each genes, "gamma" represents the selected gamma parameters 
+#' in model scMEB, "train_error" represents the corresponding train_error when 
+#' the value of gamma changed, "dist" shows the distance between the points and 
+#' the radius of the sphere in feature space.
 #' @examples
 #' ## Simulation data for scRNA-seq data generated from splatter package.
 #' library(SingleCellExperiment)
 #' data(sim_scRNA_data)
 #' data(stable_gene)
-#' sim_scRNA <- scMEB(sce=sce, stable_idx=stable_gene_name, 
+#' sim_scRNA <- scMEB(sce=sim_scRNA_data, stable_idx=stable_gene, 
 #' filtered = FALSE, gamma = seq(1e-04,0.001,1e-05), nu = 0.01, 
 #' reject_rate = 0.1)
 #' @export
@@ -92,7 +93,7 @@ scMEB <- function(sce, stable_idx, filtered = FALSE,
                                   model = model_new,
                                   gamma = gamma[gamma_num_new]) - model_new$rho}
   
-  list(model=model_new, gamma = gamma[gamma_num_new], 
+  list(model=model_new, dat_pca=dat.pca_scMEB, gamma = gamma[gamma_num_new], 
        train_error = train_error, dist = check)
 }
 
