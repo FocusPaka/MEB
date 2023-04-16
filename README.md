@@ -13,7 +13,12 @@ considering two or more potential types of cells or unknown labels scRNA-seq
 dataset DEGs identification. 
 
 # Installation
-The latest version of the package can be installed through `devtools` in R:
+You can install MEB from Bioconductor by running:
+```{r}
+install.packages("BiocManager")
+BiocManager::install("MEB")
+```
+You can also install the latest version of the package through `devtools` in R:
 ```{r}
 library("devtools")
 devtools::install_github("FocusPaka/MEB")
