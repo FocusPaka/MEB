@@ -55,6 +55,13 @@ install.packages("BiocManager")
 BiocManager::install("MEB")
 ```
 
+Or you could also install the latest version of package from the github
+```{r, eval=FALSE}
+library("devtools")
+devtools::install_github("FocusPaka/MEB")
+```
+
+
 Then, the MEB package is ready to load.
 ```{r}
 library(MEB)
@@ -255,9 +262,8 @@ filtered = TRUE, gamma = seq(1e-04,0.001,1e-05), nu = 0.01,
 reject_rate = 0.1)
 ```
 
-Predict a gene and find out whether DE gene. For *sim_data_sp* data, we predict 
-the discrimination results as 
-follows:
+3. Predict a gene and find out whether DE gene
+For *sim_data_sp* data, we predict the discrimination results as follows:
 ```{r}
 sim_scRNA_pred <- predict(sim_scRNA$model, sim_scRNA$dat_pca)
 summary(sim_scRNA_pred)
