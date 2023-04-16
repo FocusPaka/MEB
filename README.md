@@ -13,7 +13,7 @@ considering two or more potential types of cells or unknown labels scRNA-seq
 dataset DEGs identification. 
 
 # Installation
-This package can be installed through `devtools` in R:
+The latest version of the package can be installed through `devtools` in R:
 ```{r}
 library("devtools")
 devtools::install_github("FocusPaka/MEB")
